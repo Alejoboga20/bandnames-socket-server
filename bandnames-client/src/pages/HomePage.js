@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { BandAdd } from '../components/BandAdd';
 import { BandList } from '../components/BandList';
 import { SocketContext } from '../context/SocketContext';
 
@@ -24,7 +25,9 @@ const HomePage = () => {
 				<div className='col-8'>
 					<BandList />
 				</div>
-				<div className='col-4'>{/* <BandAdd createBand={createBand} /> */}</div>
+				<div className='col-4'>
+					<BandAdd />
+				</div>
 			</div>
 		</div>
 	);
