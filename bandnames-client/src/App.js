@@ -38,6 +38,8 @@ const App = () => {
 		});
 	}, [socket]);
 
+	const createBand = (name) => socket.emit('create-new-band', { name });
+
 	const vote = (id) => socket.emit('vote-band', id);
 
 	const deleteBand = (id) => socket.emit('delete-band', id);
@@ -70,7 +72,7 @@ const App = () => {
 					/>
 				</div>
 				<div className='col-4'>
-					<BandAdd />
+					<BandAdd createBand={createBand} />
 				</div>
 			</div>
 		</div>
